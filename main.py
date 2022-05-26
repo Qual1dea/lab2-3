@@ -13,8 +13,6 @@ try:
         while buffer:
             while (buffer < '0' or buffer > '9') and buffer:
                 buffer = file.read(buffer_len)                         # читаем очередной блок
-            if not buffer:
-                print("\nФайл в директории проекта пустой или его нет")
             while ('0' <= buffer <= '9' or buffer in ' .,' or buffer < '0' or buffer > '9') and buffer:
                 if '0' <= buffer <= '9' or buffer == '.' or buffer == ',':
                     if len(number) != 0 and (buffer == '.' or buffer == ','):
